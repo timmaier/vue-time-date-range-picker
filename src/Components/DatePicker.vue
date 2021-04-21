@@ -118,6 +118,7 @@ export default {
   },
   methods: {
     closeCalendarDialog() {
+      console.log('Test debug')
       this.showCalendarDialog = false;
     },
 
