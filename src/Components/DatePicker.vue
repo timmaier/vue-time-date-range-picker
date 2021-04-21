@@ -16,6 +16,7 @@
       @on-click="onClickDateInput"
     />
     <calendar-dialog
+      v-click-outside="closeCalendarDialog"
       v-show="showingCalendarDialog"
       :language="language"
       :inline="inline"
@@ -116,6 +117,10 @@ export default {
     },
   },
   methods: {
+    closeCalendarDialog() {
+      this.showCalendarDialog = false;
+    },
+
     onApply(date1, date2) {
       if (!date1 || !date2) return false;
 
